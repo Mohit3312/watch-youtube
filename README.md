@@ -14,3 +14,18 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Debouncing:
+
+typing slow = 200ms
+typing fast = 30ms
+
+Performance:
+
+- iphone pro max = 14 letters \* 1000 = 14000
+- with debouncing = 3 API calls \* 1000 = 3000
+
+Debouncing with 200ms
+
+- If difference between 2 key strokes is < 200ms - Decline API call.
+- > 200ms - Make an API call.
